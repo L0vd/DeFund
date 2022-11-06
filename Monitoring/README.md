@@ -58,6 +58,7 @@ mkdir defund-monitoring
 cd defund-monitoring
 wget https://raw.githubusercontent.com/L0vd/DeFund/main/Monitoring/monitor.sh
 wget https://raw.githubusercontent.com/L0vd/DeFund/main/Monitoring/telegraf.conf
+wget https://raw.githubusercontent.com/L0vd/DeFund/main/Monitoring/variables.sh
 nano variables.sh
 ```
 
