@@ -4,3 +4,18 @@
 </p>
 
 # DeFund
+
+## Node installation guide
+https://github.com/L0vd/DeFund/tree/main/Node_installation_guide
+
+## Explorer
+http://explorers.l0vd.com/defund-private-2
+
+## Monitoring
+https://github.com/L0vd/DeFund/tree/main/Monitoring
+
+## State sync
+https://github.com/L0vd/DeFund/tree/main/State_Sync
+
+## Wallet bot
+https://github.com/L0vd/DeFund/tree/main/DeFund_Wallet_Bot
