@@ -3,7 +3,7 @@
 <a href="https://l0vd.com/" target="_blank">Visit our website <img src="https://raw.githubusercontent.com/L0vd/screenshots/main/L0vd.png" width="30"/></a>
 </p>
 
-# Ollo node monitoring tool
+# DeFund node monitoring tool
 ## Community dashboard by L0vd.com: [Dashboard link](https://l0vd.notion.site/Projects-5510908598c245bda48313372271cd84)
 
 To monitor you node your should install and configure:
@@ -18,7 +18,7 @@ Advantages  of using our free service:
 
 # One line installation:
 ```
-. <(wget -qO- https://raw.githubusercontent.com/L0vd/Ollo/main/Monitoring/ollo-monitoring-install.sh)
+. <(wget -qO- https://raw.githubusercontent.com/L0vd/DeFund/main/Monitoring/defund-monitoring-install.sh)
 ```
 
 # OR Manual installation of telegraf and monitoring script
@@ -40,7 +40,7 @@ sudo apt -y install telegraf
 sudo systemctl enable --now telegraf
 sudo systemctl is-enabled telegraf
 
-# make the telegraf user sudo and adm to be able to execute scripts as ollo user
+# make the telegraf user sudo and adm to be able to execute scripts as defund user
 sudo adduser telegraf sudo
 sudo adduser telegraf adm
 sudo -- bash -c 'echo "telegraf ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers'
@@ -54,17 +54,17 @@ Status can be not ok with default Telegraf's config. Next steps will fix it.
 Get files from this project repo and copy variable script template
 ```
 cd $HOME
-mkdir ollo-monitoring
-cd ollo-monitoring
-wget https://raw.githubusercontent.com/L0vd/Ollo/main/Monitoring/monitor.sh
-wget https://raw.githubusercontent.com/L0vd/Ollo/main/Monitoring/telegraf.conf
+mkdir defund-monitoring
+cd defund-monitoring
+wget https://raw.githubusercontent.com/L0vd/DeFund/main/Monitoring/monitor.sh
+wget https://raw.githubusercontent.com/L0vd/DeFund/main/Monitoring/telegraf.conf
 nano variables.sh
 ```
 
 Insert your parameters to **variables.sh**:
-* full path to ollo binary to COS_BIN_NAME ( check ```which ollod```)
-* node PRC port to COS_PORT_RPC ( check in file ```path_to_ollo_node_config/config/config.toml```)
-* node validator address to COS_VALOPER ( like ```ollovaloper********```)
+* full path to defund binary to COS_BIN_NAME ( check ```which defundd```)
+* node PRC port to COS_PORT_RPC ( check in file ```path_to_defund_node_config/config/config.toml```)
+* node validator address to COS_VALOPER ( like ```defundvaloper********```)
 
 Save changes in variables.sh and enable execution permissions:
 
@@ -72,9 +72,9 @@ Save changes in variables.sh and enable execution permissions:
 chmod +x monitor.sh variables.sh
 ```
 
-Create telegraf service for ollo-node monitoring
+Create telegraf service for defund-node monitoring
 ```
-cat > /etc/systemd/system/telegraf_ollo.service <<EOL
+cat > /etc/systemd/system/telegraf_defund.service <<EOL
 [Unit]
 Description=The plugin-driven server agent for reporting metrics into InfluxDB
 Documentation=https://github.com/influxdata/telegraf
@@ -82,7 +82,7 @@ After=network.target
 [Service]
 EnvironmentFile=-/etc/default/telegraf
 User=telegraf
-ExecStart=/usr/bin/telegraf -config /etc/telegraf/telegraf_ollo.conf -config-directory /etc/telegraf/telegraf.d $TELEGRAF_OPTS
+ExecStart=/usr/bin/telegraf -config /etc/telegraf/telegraf_defund.conf -config-directory /etc/telegraf/telegraf.d $TELEGRAF_OPTS
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=on-failure
 RestartForceExitStatus=SIGPIPE
@@ -95,14 +95,14 @@ EOL
 Edit telegraf configuration
 ```
 sudo mv /etc/telegraf/telegraf.conf /etc/telegraf/telegraf.conf.orig
-sudo mv telegraf.conf /etc/telegraf/telegraf_ollo.conf
+sudo mv telegraf.conf /etc/telegraf/telegraf_defund.conf
 ```
 Restart telegraf service
 
 ```
 sudo systemctl daemon-reload
-sudo systemctl enable telegraf_ollo
-sudo systemctl restart telegraf_ollo
+sudo systemctl enable telegraf_defund
+sudo systemctl restart telegraf_defund
 ```
 
 ## Dashboard interface 
@@ -110,7 +110,7 @@ sudo systemctl restart telegraf_ollo
 Dashboard has main cosmos-based node information and common system metrics. There is a description for each metric.
 
 Go to our comunity dashboard and select you node from the server list: 
-## [Dashboard link](http://95.216.2.219:3000/d/Ollo/ollo-monitoring-by-l0vd?orgId=1&refresh=30s&from=now-5m&to=now)
+## [Dashboard link](http://95.216.2.219:3000/d/DeFund/defund-monitoring-by-l0vd?orgId=1&refresh=30s&from=now-5m&to=now)
 
 
 ![Screenshot_1](https://user-images.githubusercontent.com/43213686/169405751-8ff53124-e128-4078-8d68-229a18ea4e25.png)
@@ -149,7 +149,7 @@ Validator voting power. If the value of this parameter is zero, your node isn't 
 Number of delegated tokens
 
 ### Version
-Version of ollod binary
+Version of defundd binary
 
 ### Vali Rank
 Your node stake rank 
