@@ -23,7 +23,7 @@ To get started, add your wallet address. After that, you will be able to see the
 /help - list of commands  
 
 **List of available buttons in the menu:**  
-💎 Token Info - Highlights of SEI token  
+💎 Token Info - Highlights of DEFUND token  
 💰 Balances - Shows the number of tokens for watchlist accounts  
 ➕ Add - Add account or validator to watchlist  
 ➖ Delete - Delete account or validator from watchlist  
