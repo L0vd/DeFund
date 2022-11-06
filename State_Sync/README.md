@@ -6,15 +6,15 @@
 # DeFund State Sync
 
 ## Info
-#### Public RPC endpoint: http://135.181.178.53:32657/
-#### Public API: http://135.181.178.53:32317/
+#### Public RPC endpoint: http://95.216.2.219:26651/
+#### Public API: http://95.216.2.219:1350/
 
 ## Guide to sync your node using State Sync:
 
 ### Copy the entire command
 ```
 sudo systemctl stop defundd
-SNAP_RPC="http://135.181.178.53:32657"; \
+SNAP_RPC="http://95.216.2.219:26651"; \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash); \
@@ -25,7 +25,7 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.defund/config/config.toml
 
-peers="724c489f7fd5125bc724c6ad4f70776d2d2249c9@135.181.178.53:32656" \
+peers="3eef2dd3ba22c18cd4021e474f49b3338af96a21@http://95.216.2.219:26661" \
 && sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.defund/config/config.toml 
 
 defundd tendermint unsafe-reset-all --home ~/.defund && sudo systemctl restart defundd && \
