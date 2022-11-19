@@ -28,7 +28,7 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.defund/co
 peers="3eef2dd3ba22c18cd4021e474f49b3338af96a21@95.216.2.219:26658" \
 && sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.defund/config/config.toml 
 
-defundd tendermint unsafe-reset-all --home ~/.defund && sudo systemctl restart defundd && \
+defundd tendermint unsafe-reset-all  --home $HOME/.defund --keep-addr-book && sudo systemctl restart defundd && \
 journalctl -u defundd -f --output cat
 ```
 
