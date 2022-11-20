@@ -12,7 +12,7 @@ sudo apt install lz4 -y
 ```
 
 ## Sync from Snapshot  
-| height  | size | prunin | indexer |
+| height  | size | pruning | indexer |
 | --------- | --------- | --------- | --------- |
 | 2075003  | 12GB  | custom/100/0/10 | null |
 
