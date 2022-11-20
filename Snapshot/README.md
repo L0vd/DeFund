@@ -5,13 +5,13 @@
 
 # DeFund Snapshot
 
-Install dependencies, if needed
+##Install dependencies, if needed
 ```
 sudo apt update
 sudo apt install lz4 -y
 ```
 
-Sync from Snapshot  
+##Sync from Snapshot  
 | height  | size | prunin | indexer |
 | --------- | --------- | --------- | --------- |
 | 2075003  | 12GB  | custom/100/0/10 | null |
