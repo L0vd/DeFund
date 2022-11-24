@@ -14,7 +14,7 @@ sudo apt install lz4 -y
 ## Sync from Snapshot  
 | Height  | Size | Pruning | Indexer | Creation Time (UTC+3) |
 | --------- | --------- | --------- | --------- | --------- |
-| 2614508  | 28GB  | custom/100/0/10 | null | 2022-11-24_20:02:18 |
+| 2644209  | 29GB  | custom/100/0/10 | null | 2022-11-25_02:02:33 |
 
 ```
 sudo systemctl stop defundd
