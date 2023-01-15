@@ -76,7 +76,7 @@ defundd init $NODENAME --chain-id $CHAIN_ID
 
 ## Download genesis
 ```
-wget -O $HOME/.defund/config/defund-private-4-genesis.json "https://raw.githubusercontent.com/defund-labs/testnet/main/defund-private-4/genesis.json"
+wget -O $HOME/.defund/config/genesis.json "https://raw.githubusercontent.com/defund-labs/testnet/main/defund-private-4/genesis.json"
 ```
 
 ## Check genesis.json file
