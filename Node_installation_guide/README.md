@@ -153,7 +153,7 @@ sudo systemctl restart defundd && sudo journalctl -u defundd -f -o cat
 <a name="state_sync"></a>
 ## (OPTIONAL) Use State Sync
 
-### [State Sync guide](https://github.com/L0vd/DeFund/tree/main/StateSync)
+### [State Sync guide](https://github.com/L0vd/DeFund/tree/main/State_Sync)
 
 
 <a name="starting_validator"></a>
