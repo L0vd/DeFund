@@ -3,22 +3,22 @@
 <a href="https://l0vd.com/" target="_blank">Visit our website <img src="https://raw.githubusercontent.com/L0vd/screenshots/main/L0vd.png" width="30"/></a>
 </p>
 
-# DeFund
+## L0vd Services for the DeFund Community
 
-## Node installation guide
+## :heart: Node installation guide
 https://github.com/L0vd/DeFund/tree/main/Node_installation_guide
 
-## Explorer
+## :heart: Explorer
 http://explorers.l0vd.com/defund-private-4
 
-## Monitoring
+## :heart: Monitoring
 https://github.com/L0vd/DeFund/tree/main/Monitoring
 
-## Snapshot
+## :heart: Snapshot
 https://github.com/L0vd/DeFund/tree/main/Snapshot
 
-## State sync
+## :heart: State sync
 https://github.com/L0vd/DeFund/tree/main/State_Sync
 
-## Wallet bot
+## :heart: Wallet bot
 https://github.com/L0vd/DeFund/tree/main/DeFund_Wallet_Bot
