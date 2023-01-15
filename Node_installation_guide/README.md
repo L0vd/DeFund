@@ -57,8 +57,8 @@ You should replace values in <> <br />
 <YOUR_WALLET> Here you shoud put the name of your wallet
 
 ```
-echo "export DEFUND_WALLET="<YOUR_WALLET_NAME>" >> $HOME/.bash_profile
-echo "export DEFUND_NODENAME="<YOUR_MONIKER>" >> $HOME/.bash_profile
+echo "export DEFUND_WALLET="<YOUR_WALLET_NAME>"" >> $HOME/.bash_profile
+echo "export DEFUND_NODENAME="<YOUR_MONIKER>"" >> $HOME/.bash_profile
 echo "export DEFUND_CHAIN_ID="defund-private-4"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
