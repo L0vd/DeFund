@@ -24,7 +24,7 @@ defundd tendermint unsafe-reset-all --home $HOME/.defund --keep-addr-book
 
 rm -rf $HOME/.defund/data 
 
-SNAP_NAME=$(curl -s http://snapshots.l0vd.com/defund/ | egrep -o ">defund-private-3.*\.tar.lz4" | tr -d ">")
+SNAP_NAME=$(curl -s http://snapshots.l0vd.com/defund/ | egrep -o ">defund-private-4.*\.tar.lz4" | tr -d ">")
 curl http://snapshots.l0vd.com/defund/${SNAP_NAME} | lz4 -dc - | tar -xf - -C $HOME/.defund
 
 mv $HOME/.defund/priv_validator_state.json.backup $HOME/.defund/data/priv_validator_state.json
