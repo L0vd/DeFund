@@ -22,3 +22,9 @@ https://github.com/L0vd/DeFund/tree/main/State_Sync
 
 ## :heart: Wallet bot
 https://github.com/L0vd/DeFund/tree/main/DeFund_Wallet_Bot
+
+## :heart: Public RPC endpoint
+http://95.216.2.219:21657
+
+## :heart: Public API
+http://95.216.2.219:21317
