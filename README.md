@@ -9,7 +9,7 @@
 https://github.com/L0vd/DeFund/tree/main/Node_installation_guide
 
 ## :heart: Explorer
-http://explorers.l0vd.com/defund-private-4
+https://explorers.l0vd.com/defund-private-4
 
 ## :heart: Monitoring
 https://github.com/L0vd/DeFund/tree/main/Monitoring
@@ -24,7 +24,7 @@ https://github.com/L0vd/DeFund/tree/main/State_Sync
 https://github.com/L0vd/DeFund/tree/main/DeFund_Wallet_Bot
 
 ## :heart: Public RPC endpoint
-http://95.216.2.219:21657
+https://defund-testnet.rpc.l0vd.com
 
 ## :heart: Public API
-http://95.216.2.219:21317
+https://defund-testnet.api.l0vd.com
