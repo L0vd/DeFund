@@ -14,7 +14,7 @@
 ### Copy the entire command
 ```
 sudo systemctl stop defundd
-SNAP_RPC="https://defund-testnet.rpc.l0vd.com/"; \
+SNAP_RPC="https://defund-testnet.rpc.l0vd.com"; \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash); \
