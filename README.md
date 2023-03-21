@@ -14,9 +14,6 @@ https://explorers.l0vd.com/defund-testnet
 ## :heart: Monitoring
 https://github.com/L0vd/DeFund/tree/main/Monitoring
 
-## :heart: Snapshot
-https://github.com/L0vd/DeFund/tree/main/Snapshot
-
 ## :heart: State sync
 https://github.com/L0vd/DeFund/tree/main/State_Sync
 
