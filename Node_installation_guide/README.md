@@ -71,7 +71,7 @@ defundd config chain-id $DEFUND_CHAIN_ID
 
 ## Initialize your node
 ```
-defundd init $NODENAME --chain-id $CHAIN_ID
+defundd init $DEFUND_NODENAME --chain-id $CHAIN_ID
 ```
 
 ## Download genesis
