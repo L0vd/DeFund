@@ -212,20 +212,20 @@ defundd q bank balances $DEFUND_WALLET
 
 ### Send tokens
 ```
-defundd tx bank send <FROM_WALLET_ADDRESS> <TO_WALLET_ADDRESS> <AMOUNT>ufetf --gas auto
+defundd tx bank send <FROM_WALLET_ADDRESS> <TO_WALLET_ADDRESS> <AMOUNT>ufetf --fees 0ufetf
 ```
 
 ### Delegate tokens to validator
 ```
-defundd tx staking delegate <MONIKER> <AMOUNT>ufetf --from $DEFUND_WALLET --chain-id $DEFUND_CHAIN_ID --gas auto
+defundd tx staking delegate <MONIKER> <AMOUNT>ufetf --from $DEFUND_WALLET --chain-id $DEFUND_CHAIN_ID --fees 0ufetf
 ```
 
 ### Vote for proposal
 #### Yes
 ```
-defundd tx gov vote <PROPOSAL_NUMBER> yes --from $DEFUND_WALLET --chain-id $DEFUND_CHAIN_ID
+defundd tx gov vote <PROPOSAL_NUMBER> yes --from $DEFUND_WALLET --chain-id $DEFUND_CHAIN_ID --fees 0ufetf
 ```
 #### No
 ```
-defundd tx gov vote <PROPOSAL_NUMBER> no --from $DEFUND_WALLET --chain-id $DEFUND_CHAIN_ID
+defundd tx gov vote <PROPOSAL_NUMBER> no --from $DEFUND_WALLET --chain-id $DEFUND_CHAIN_ID --fees 0ufetf
 ```
