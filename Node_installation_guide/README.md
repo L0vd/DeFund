@@ -30,7 +30,7 @@ sudo apt install curl build-essential git wget jq make gcc tmux chrony -y
 ## Install GO
 ```
 if ! [ -x "$(command -v go)" ]; then
-  ver="1.18.3"
+  ver="1.19.3"
   cd $HOME
   wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
   sudo rm -rf /usr/local/go
@@ -46,7 +46,7 @@ fi
 cd $HOME && rm -rf defund
 git clone https://github.com/defund-labs/defund.git
 cd defund
-git checkout v0.2.2
+git checkout v0.2.6
 make install
 ```
 
@@ -59,7 +59,7 @@ You should replace values in <> <br />
 ```
 echo "export DEFUND_WALLET="<YOUR_WALLET_NAME>"" >> $HOME/.bash_profile
 echo "export DEFUND_NODENAME="<YOUR_MONIKER>"" >> $HOME/.bash_profile
-echo "export DEFUND_CHAIN_ID="defund-private-4"" >> $HOME/.bash_profile
+echo "export DEFUND_CHAIN_ID="orbit-alpha-1"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -76,14 +76,14 @@ defundd init $NODENAME --chain-id $CHAIN_ID
 
 ## Download genesis
 ```
-wget -O $HOME/.defund/config/genesis.json "https://raw.githubusercontent.com/defund-labs/testnet/main/defund-private-4/genesis.json"
+wget -O $HOME/.defund/config/genesis.json "https://raw.githubusercontent.com/defund-labs/testnet/main/orbit-alpha-1/genesis.json"
 ```
 
 ## Check genesis.json file
 ```
 # check genesis sha sum
 sha256sum ~/.defund/config/genesis.json
-# output must be: db13a33fbb4048c8701294de79a42a2b5dff599d653c0ee110390783c833208b
+# output must be: 58916f9c7c4c4b381f55b6274bce9b8b8d482bfb15362099814ff7d0c1496658
 # otherwise you have an incorrect genesis file
 ```
 
@@ -101,8 +101,8 @@ sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${D
 
 ## Set seeds and peers
 ```
-SEEDS="9f92e47ea6861f75bf8a450a681218baae396f01@94.130.219.37:26656,f03f3a18bae28f2099648b1c8b1eadf3323cf741@162.55.211.136:26656,f8fa20444c3c56a2d3b4fdc57b3fd059f7ae3127@148.251.43.226:56656,70a1f41dea262730e7ab027bcf8bd2616160a9a9@142.132.202.86:17000,e47e5e7ae537147a23995117ea8b2d4c2a408dcb@172.104.159.69:45656,74e6425e7ec76e6eaef92643b6181c42d5b8a3b8@defund-testnet-seed.itrocket.net:443"
-PEERS="9f92e47ea6861f75bf8a450a681218baae396f01@94.130.219.37:26656,f03f3a18bae28f2099648b1c8b1eadf3323cf741@162.55.211.136:26656,f8fa20444c3c56a2d3b4fdc57b3fd059f7ae3127@148.251.43.226:56656,70a1f41dea262730e7ab027bcf8bd2616160a9a9@142.132.202.86:17000,e47e5e7ae537147a23995117ea8b2d4c2a408dcb@172.104.159.69:45656,74e6425e7ec76e6eaef92643b6181c42d5b8a3b8@defund-testnet-seed.itrocket.net:443"
+SEEDS="f902d7562b7687000334369c491654e176afd26d@170.187.157.19:26656,2b76e96658f5e5a5130bc96d63f016073579b72d@rpc-1.defund.nodes.guru:45656"
+PEERS="f902d7562b7687000334369c491654e176afd26d@170.187.157.19:26656,f8093378e2e5e8fc313f9285e96e70a11e4b58d5@rpc-2.defund.nodes.guru:45656,878c7b70a38f041d49928dc02418619f85eecbf6@rpc-3.defund.nodes.guru:45656,3594b1f46c6321d9f99cda8ad5ef5a367ce06ccf@199.247.16.116:26656"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.defund/config/config.toml
 ```
 
