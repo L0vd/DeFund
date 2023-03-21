@@ -9,7 +9,7 @@
 https://github.com/L0vd/DeFund/tree/main/Node_installation_guide
 
 ## :heart: Explorer
-https://explorers.l0vd.com/defund-private-4
+https://explorers.l0vd.com/defund-testnet
 
 ## :heart: Monitoring
 https://github.com/L0vd/DeFund/tree/main/Monitoring
