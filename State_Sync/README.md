@@ -26,7 +26,7 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.defund/config/config.toml
 
-peers="2f2aa0c7f3bb18836a51cc8dc4c6a26e17acd4c3@65.108.11.234:26656" \
+peers="2f2aa0c7f3bb18836a51cc8dc4c6a26e17acd4c3@65.108.11.234:21656" \
 && sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.defund/config/config.toml 
 
 defundd tendermint unsafe-reset-all  --home $HOME/.defund --keep-addr-book && sudo systemctl restart defundd && \
